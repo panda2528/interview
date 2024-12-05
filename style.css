@@ -1,0 +1,331 @@
+ @font-face {
+  font-family: 'ChosunGu';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+  scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0 20px;
+    padding: 80px 0 0 0;
+    background-color: #FAF3E0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* height: 100vh; */
+    overflow: auto; /* 스크롤 없애기 */
+    flex-direction: column;
+    font-family: 'ChosunGu';
+    letter-spacing: -0.4px; /*자간 설정*/
+    line-height: 1.4; /* 줄 간격을 설정 */
+    text-align: justify; /* 양쪽 정렬 */
+    font-size: 1rem; /* 일단,, aside글씨크기가 이걸로 조정됨 */
+}
+
+/* 헤더 */
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(192, 198, 166); 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* font-family: 'ChosunGu' ; */
+  position: fixed; /* 고정 */
+  top: 0; /* 화면 상단 고정 */
+  left: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: auto;
+  width: 450px;
+}
+
+header nav {
+  display: flex;
+  gap: 40px;
+  padding-right: 70px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  font-family: 'ChosunGu', sans-serif;
+  font-weight: bold; 
+  transition: color 0.3s ease;
+}
+
+.logo img{
+  width: 250px;
+  height: auto;
+}
+
+
+
+/* 바디 */
+
+.contents{
+  display: flex;
+  gap: 10px;
+  margin-top: 80px;
+  width: 100%;
+  /* box-sizing: border-box; */
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  overflow: visible;
+  margin: auto;
+  padding: 0;
+}
+
+
+/* aside */
+
+
+#sideBar {
+  position: sticky;
+  top: 100px;
+  right: 10px;
+  width: auto;
+  height: calc(100vh - 300px);
+  flex: 2;
+  /* white-space: nowrap; */
+  /* overflow-y: auto; */
+  /* flex: 2; */
+/* outline: 2px solid red; */
+}
+
+.subtitle{
+  margin-left: 20px;
+  width: 100%;
+  font-size: 20pt;
+  color: #442d1d;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative
+}
+
+.subtitle img{
+  width: 30px;
+  height: auto;
+  position: absolute;
+  left: 10px;
+}
+
+.subtitle h3{
+  /* margin-left: 50px; */
+  white-space: nowrap;
+}
+
+li{
+  list-style: none;
+  color: #442d1d;
+  margin-bottom: 10px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+
+  border-left: 2px solid #885e40a4;
+}
+
+a{
+  padding-left: 10px;
+  text-decoration: none; /* 밑줄제거 */
+  font-size: 13pt;
+}
+
+a:hover{
+  font-weight: bold;
+  transform: weight 0.3s ease;
+}
+
+a:link,
+a:visited {
+  color: inherit; /* 방문한 링크 색상 변경 안 하게 원래 색상으로 되돌리기 */
+}
+
+
+
+/* 내용 */
+
+.container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px; /* 헤더 아래 여백 */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: none; /* 높이 제한을 없앴음 */
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  flex: 6;
+  margin-bottom: 50px;
+}
+
+
+
+
+/* @media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .left,
+    .container .right {
+        height: 50vh;
+    }
+
+    
+} */
+
+
+
+/* 말풍선 */
+
+.qa-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  line-height: 1.5;
+}
+
+.qa-box .photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;  /* 이미지가 넘칠 경우 잘림 */
+  border: 1px solid #9d9167;
+}
+
+.qa-box .photo img {
+  max-width: 100%;  /* 이미지 크기를 부모 크기에 맞게 조정 */
+  max-height: 100%;  /* 이미지 크기를 부모 크기에 맞게 조정 */
+  object-fit: contain;  /* 이미지 비율을 유지하면서 영역에 맞게 조정 */
+}
+
+.qa-box .speech-bubble {
+  background-color: white;
+  border: 2px solid #442d1d;
+  border-radius: 15px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 65%; /* 말풍선 길이 변경 */
+  max-height: 80vh;
+  overflow: auto;
+  box-shadow: 0 5px 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.question .speech-bubble {
+  border-color: black; /* 질문은 검정색 테두리 */
+  color: black; /* 질문 텍스트 색 */
+
+}
+
+
+
+/* 답변 */
+
+.answer {
+  flex-direction: row;
+  justify-content: flex-end; /* 답변을 오른쪽으로 배치 */
+  align-items: flex-end; /* 사진과 말풍선이 아래쪽으로 정렬 */
+}
+
+.answer .speech-bubble {
+  border-color: #442d1d; /* 답변은 초록색 테두리 */
+  color: #442d1d; /* 답변 텍스트 색 */
+  order: 1; /* 말풍선은 첫번째로 */
+  text-align: left;
+}
+
+.answer .speech-bubble img{
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.answer .photo {
+  order: 2; /* 사진은 두번째로 */
+}
+
+.answer img{
+  max-width: 100vh;
+  height: auto;
+  overflow: hidden;
+}
+
+
+
+
+/* footer */
+
+.footerwrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(192, 198, 166);
+  width: 100vw;
+  height: 80px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+small{
+  color: #FAF3E0;
+  font-weight: bold;
+}
+
+.qa-box .speech-bubble .highlight {
+  background-color: #ffda7b; /* 하이라이트 색상 */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+
+@keyframes moveText {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(10px);
+  }
+}
+
+

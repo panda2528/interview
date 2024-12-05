@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HakgyoansimDunggeunmisoTTF-B';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'ChosunGu', sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  background-color: #FAF3E0;
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  height: 10vh;
+}
+
+header a{
+  width: 200x; 
+  height: auto;
+}
+
+header a img{
+  width: 250px;
+  height: auto;
+}
+
+.syasin {
+  flex: 1; 
+  display: flex; 
+  width: 100%; 
+  height: calc(100vh - 10vh - 30vh); /* header와 footer 높이를 뺀 나머지 */
+}
+
+.syasin div {
+  flex: 1; 
+  overflow: hidden; 
+  position: relative; 
+}
+
+.syasin div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.syasin div :hover img{
+  opacity: 50%;
+  transition: opacity 0.3s ease;
+  transform: scale(1.2);
+}
+
+.syasin div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 5vh;
+  font-weight: bold;
+  opacity: 0; /* 기본적으로 숨김 */
+  transition: opacity 0.3s ease;
+}
+
+.syasin div:hover span {
+  opacity: 1; /* 마우스 올리면 보임 */
+}
+
+
+footer{
+  margin: 0;
+  padding: 0;
+  height: 30vh;
+  background-color: #FAF3E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(192, 198, 166);
+}
+
+footer a{
+  font-size: 100pt;
+  text-decoration: none;
+  font-family: 'HakgyoansimDunggeunmisoTTF-B';
+  transition: font-size 0.3s ease;
+  
+}
+
+footer a:hover{
+  font-size: 105pt;
+}
+
+footer a:link,
+footer a:visited {
+  color: inherit; /* 방문한 링크 색상 변경 안 하게 원래 색상으로 되돌리기 */
+}
