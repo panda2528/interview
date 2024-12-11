@@ -140,7 +140,7 @@
 
         .int-profile{
             display: flex;
-            justify-content: center;
+            justify-content:space-between;
             align-items: center;
         }
 
@@ -157,6 +157,18 @@
         .int-profile img{
             width: auto;
             height: 80px;
+        }
+
+        .jissya {
+            display: none;
+        }
+
+        a:hover .jissya {
+            display: inline-block;
+        }
+
+        a:hover .doubutu {
+            display: none;
         }
 
     </style>
@@ -214,10 +226,10 @@
     <div class="interviewer">
         <p>인터뷰어</p>
         <div class="int-profile">
-            <a><img src="img/daram.png"><p>박웅비</p></a>
-            <a><img src="img/panda.png"><p>이경연</p></a>
-            <a><img src="img/neko.png"><p>장소윤</p></a>
-            <a><img src="img/penguin.png"><p>최부권</p></a>
+            <a><img src="img/daram.png" class="doubutu"><img src="img/박웅비.jpg" class="jissya"><p>박웅비</p></a>
+            <a><img src="img/panda.png" class="doubutu"><img src="img/이경연.jpg" class="jissya"><p>이경연</p></a>
+            <a><img src="img/neko.png" class="doubutu"><img src="img/장소윤.jpg" class="jissya"><p>장소윤</p></a>
+            <a><img src="img/penguin2.png" class="doubutu"><img src="img/박웅비.jpg" class="jissya"><p>최부권</p></a>
         </div>
     </div>
 
